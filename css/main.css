@@ -1,0 +1,145 @@
+*              {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HAMBURGARE*/
+
+
+ /*GRID*/
+
+.grid-container  {
+    background-color: rgb(190, 231, 190);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.grid {
+    background-color: rgb(126, 126, 173);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+
+    grid-gap: 1rem;
+
+    grid-template-areas: 
+    
+    ". . . . . . . . . ."
+    ". . a a . . d d . ."
+    ". . a a . . d d . ."
+    ". . a a . . d d . ."
+    ". . . . . . d d . ."
+    ". . . g g . d d . ."
+    ". . . g g . d d . ."
+    ". . . g g . d d . ."
+    ". . . . . . . . . ."
+}
+
+.item  {
+background-color: rgb(124, 233, 124);
+width: 300px;
+height: 300px;
+grid-column-start: 2;
+grid-column-end: 4;
+grid-row-start: 2;
+grid-row-end: 4;
+
+
+justify-self: center;
+align-self: center;
+}
+
+/*FLEX*/
+
+.box  {
+    background-color: lightgray;   
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area:a ;
+}
+
+.box2  {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    justify-content: space-between;
+    grid-area:g ;
+}
+.box3  {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    justify-content: space-between;
+    grid-area:d ;
+}
+
+nav {
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px;
+}
+
+.flex {
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Navbar {
+    display: flex;
+  }
+
+/*Meny*/
+ul { 
+    display: flexbox;
+    list-style: none;}
+
+.menu {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(212, 108, 108);
+}
+
+a  {
+    text-decoration: none;
+    color: black;
+}
+
+/*Mobilanpassad*/
+
+@media  (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 768px)  {
+    .flex  {
+        flex-direction: column;
+    }
+}
+
+
+
